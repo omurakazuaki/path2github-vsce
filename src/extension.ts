@@ -52,6 +52,21 @@ export function activate(context: vscode.ExtensionContext) {
     }
   }));
 
+  context.subscriptions.push(vscode.commands.registerCommand('path2github.blameSelection', async() => {
+    try {
+      const editor = vscode.window.activeTextEditor;
+      if (editor) {
+        const blobUrl = await resolveGithubUrl(editor);
+        const blameUrl = blobUrl.replace('/blob/', '/blame/');
+        open(blameUrl);
+      } else {
+        throw new Error('No selected editor');
+      }
+    } catch (err) {
+      vscode.window.showErrorMessage(err.message);
+    }
+  }));
+
   context.subscriptions.push(vscode.commands.registerCommand('path2github.newIssue', async() => {
     try {
       const editor = vscode.window.activeTextEditor;
