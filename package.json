@@ -241,7 +241,7 @@
     "json-parse-better-errors": "^1.0.2",
     "json-schema-traverse": "^0.4.1",
     "json-stable-stringify-without-jsonify": "^1.0.1",
-    "json5": "^2.2.0",
+    "json5": "^2.2.2",
     "kind-of": "^6.0.3",
     "levn": "^0.4.1",
     "listenercount": "^1.0.1",
