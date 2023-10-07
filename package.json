@@ -315,7 +315,7 @@
     "run-parallel": "^1.2.0",
     "safe-buffer": "^5.2.1",
     "schema-utils": "^3.0.0",
-    "semver": "^7.3.4",
+    "semver": "^7.5.2",
     "serialize-javascript": "^5.0.1",
     "setimmediate": "^1.0.5",
     "shallow-clone": "^3.0.1",
