@@ -262,7 +262,7 @@
     "minimatch": "^3.0.5",
     "mkdirp": "^0.5.5",
     "ms": "^2.1.2",
-    "nanoid": "^3.1.20",
+    "nanoid": "^3.1.31",
     "natural-compare": "^1.4.0",
     "neo-async": "^2.6.2",
     "node-releases": "^1.1.71",
