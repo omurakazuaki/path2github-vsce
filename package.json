@@ -2,7 +2,7 @@
   "name": "path2github",
   "displayName": "Path2Github",
   "description": "Open the selected file on Github.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "omurakazuaki",
   "engines": {
     "vscode": "^1.53.0"
@@ -14,6 +14,7 @@
     "onCommand:path2github.open",
     "onCommand:path2github.blame",
     "onCommand:path2github.openSelection",
+    "onCommand:path2github.blameSelection",
     "onCommand:path2github.openWorkflow",
     "onCommand:path2github.newIssue"
   ],
@@ -39,6 +40,11 @@
         "when": "editorHasSelection || editorTextFocus",
         "command": "path2github.openSelection",
         "title": "Open on Github"
+      },
+      {
+        "when": "editorHasSelection || editorTextFocus",
+        "command": "path2github.blameSelection",
+        "title": "Blame on Github"
       },
       {
         "when": "editorHasSelection || editorTextFocus",
@@ -71,6 +77,11 @@
           "group": "z_commands"
         },
         {
+          "when":  "editorHasSelection || editorTextFocus",
+          "command": "path2github.blameSelection",
+          "group": "z_commands"
+        },
+        {
           "when": "resourceDirname =~ /.*..github.workflows$/ && resourceExtname == .yml",
           "command": "path2github.openWorkflow",
           "group": "z_commands"
@@ -90,7 +101,7 @@
     "package": "webpack --mode production --devtool hidden-source-map",
     "publish": "vsce publish",
     "dev:package": "vsce package -o dist",
-    "dev:install": "code --install-extension dist/path2github-0.0.2.vsix",
+    "dev:install": "code --install-extension dist/path2github-0.0.4.vsix",
     "dev:deploy": "npm run dev:package && npm run dev:install",
     "test-compile": "tsc -p ./",
     "test-watch": "tsc -watch -p ./",
